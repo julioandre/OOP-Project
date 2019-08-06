@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>656</x>
+      <y>264</y>
+      <w>40</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>/AbstractClass/
+SWAffordance
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>664</x>
+      <y>336</y>
+      <w>164</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>MindTricks
+--
+
+--
++MindTricks(SWEntityInterface theTarget, MessageRenderer m) 
++canDo(SWActor a) : boolean
++act(SWActor a) : void
++stringDescription() : String
+--
+Responsibilities
+-- Controls the target's next move by adding the ForceMovement 
+action to the controller</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>492</x>
+      <y>432</y>
+      <w>228</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>ForceMovement
+--
+
+--
++ForceMovement(SWEntityInterface theTarget, Direction direction, MessageRenderer m)
++canDo(SWActor a) : boolean
++act(SWActor a) : void
++stringDescription() : String
+--
+Responsibilities
+-- Forces the movement of the target to move</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>656</x>
+      <y>228</y>
+      <w>40</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>/AbstractClass/
+SWAction</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>240</y>
+      <w>12</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>876</x>
+      <y>236</y>
+      <w>92</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>ForceAbility
+--
+-amount : int 
+--
++ForceAbility(int amount)
++getForce() : int
++setForce(int newAmount) : void
+--
+Responsibilities
+-- Stores the amount of force ability 
+an starwars actor has</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>308</y>
+      <w>12</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>356</y>
+      <w>44</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>860</x>
+      <y>336</y>
+      <w>144</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>/AbstractClass/
+SWActor
+--
+
+--
++returnPossibleMoves() : ArrayList&lt;SWActionInterface&gt;
+--
+Responsibilities
+-- Calculates the possible movement of the actor and 
+returns an array of actions
+-- This is to allow MindTricks class to retrieve a list of 
+possible places to force the target to move in the grid</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>972</x>
+      <y>416</y>
+      <w>136</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>Note..
+Mehods which does not change are not shown</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>32</x>
+      <y>292</y>
+      <w>808</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>Actions</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>316</x>
+      <y>336</y>
+      <w>164</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>Train
+--
+
+--
++Train(SWEntityInterface theTarget, MessageRenderer m) 
++canDo(SWActor a) : boolean
++act(SWActor a) : void
++stringDescription() : String
+--
+Responsibilities
+-- Controls the target's next move by adding the ForceMovement 
+action to the controller</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>408</y>
+      <w>536</w>
+      <h>124</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>1320.0;290.0;10.0;290.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>908</x>
+      <y>520</y>
+      <w>40</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>Player</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>924</x>
+      <y>408</y>
+      <w>12</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>864</x>
+      <y>684</y>
+      <w>192</w>
+      <h>92</h>
+    </coordinates>
+    <panel_attributes>Droid
+--
+-owner : SWActor
+-isMobile : boolean
+-parts : Parts
+--
++Droid(int hitpoints, String name, MessageRenderer m, SWWorld world)
++act(SWActor a) : void
++getShortDescription() : String
++getLongDescription() : String
++describLocation() : String
+--
+Responsibilities
+-- Calculates the possible movement of the actor and 
+returns an array of actions
+-- This is to allow MindTricks class to retrieve a list of 
+possible places to force the target to move in the grid</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>924</x>
+      <y>408</y>
+      <w>56</w>
+      <h>284</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0;120.0;140.0;120.0;690.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>656</x>
+      <y>952</y>
+      <w>192</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Follow
+--
+-owner : SWActor
+--
++Follow(SWActor owner)
++getNextDirection() : Direction
++act(SWActor a) : void
++stringDescription() : String
+--
+Responsibilities
+-- This class handles the droids movemnet
+-- The droid will follow the owner based on the owner's coordinates</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>776</x>
+      <y>716</y>
+      <w>96</w>
+      <h>244</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;590.0;10.0;10.0;220.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>864</x>
+      <y>948</y>
+      <w>192</w>
+      <h>92</h>
+    </coordinates>
+    <panel_attributes>Heal
+--
+-item : SWEntity
+-target : SWActor
+--
++Heal(SWEntity item, SWActor theTarget)
++CanDrink() : boolean
+--
+Responsibilities
+-- This class will be called by act() from Droid so that droid could heal by 
+themselfs
+-- The Heal(..) method will increase the hp of the droid as it passes by an
+oil can</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>956</x>
+      <y>772</y>
+      <w>12</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;440.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>124</x>
+      <y>336</y>
+      <w>164</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Drink
+--
+
+--
++Drink(SWEntityInterface theTarget, MessageRenderer m)
++canDo(SWActor a) : boolean 
++act(SWActor a) : void
++stringDescription() : String
+--
+Responsibilities
+-- Handles the drink action to allow an actor to heal by drinking
+oil / canteen
+-- Handles the amount to heal the actor and depletes the entity 
+appropriately
+-- canDo(..) checks whether the actor is holding the enitity
+(either oil can/canteen) and check if the hp of the actor 
+is already full</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>472</y>
+      <w>164</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Dissemble
+--
+
+--
++Dissemble(SWEntityInterface theTarget, MessageRenderer m)
++canDo(SWActor a) : boolean 
++act(SWActor a) : void
++stringDescription() : String
+--
+Responsibilities
+-- Handles the drink action to allow an actor to heal by drinking
+oil / canteen
+-- Handles the amount to heal the actor and depletes the entity 
+appropriately
+-- canDo(..) checks whether the droid is immobile (dead) in order to 
+repair the droid</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>596</y>
+      <w>172</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>Repair
+--
+
+--
++Repair(SWEntityInterface theTarget, MessageRenderer m)
++canDo(SWActor a) : boolean 
++act(SWActor a) : void
++stringDescription() : String
+--
+Responsibilities
+-- Handles healing an immobile (dead) droid by using a part
+-- canDo(..) checks whether the actor is holding a part and checks
+its capability to repair a droid</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>192</x>
+      <y>280</y>
+      <w>492</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>1210.0;10.0;1210.0;100.0;10.0;100.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>296</x>
+      <y>280</y>
+      <w>388</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>950.0;10.0;950.0;100.0;10.0;100.0;10.0;480.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>484</x>
+      <y>280</y>
+      <w>200</w>
+      <h>324</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>480.0;10.0;480.0;100.0;10.0;100.0;10.0;790.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>280</y>
+      <w>12</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>544</x>
+      <y>280</y>
+      <w>140</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>330.0;10.0;330.0;100.0;10.0;100.0;10.0;380.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>580</x>
+      <y>876</y>
+      <w>548</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>Behaviours</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1148</x>
+      <y>684</y>
+      <w>164</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Parts
+--
+
+--
++Parts(MessageRenderer m)
++getSymbol() : String
+--
+Responsibilities
+-- an entity used to repair the droid
+-- Take() affordance will be added to allow the entity to be taken
+-- add capability of "repairable"</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1052</x>
+      <y>720</y>
+      <w>104</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>240.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1116</x>
+      <y>648</y>
+      <w>444</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Entities</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1328</x>
+      <y>684</y>
+      <w>156</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>OilCan
+--
+-capability : int
+-level :int
+--
++OilCan(MessageRenderer m, int capacity, int initialLevel)
++fill() : void
++getShortDescription() : String
++getLongDescription() : String
+--
+Responsibilities
+-- an entity used to heal the droid back to full hp
+-- FILLABLE capability will not be added because 
+oil can not be healed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1052</x>
+      <y>764</y>
+      <w>364</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>890.0;10.0;890.0;580.0;10.0;580.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>388</x>
+      <y>280</y>
+      <w>296</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>720.0;10.0;720.0;100.0;10.0;100.0;10.0;140.0</additional_attributes>
+  </element>
+</diagram>
